@@ -14,11 +14,11 @@ Discussion
 
   Explain your answer.
 
-
-
-
-
-
+When you frequently add and remove from the end, it's appropriate to use a doubly-
+linked list. You can enqueue or dequeue easiest with a doubly linked list by
+popping the head or tail and then readjusting the head or tail pointer.
+It would suck to search because, worst case scenario, you need to traverse
+the entire doubly-linked list.
 
 
 2. Which would be the most efficient data structure for a data set with the
@@ -34,29 +34,32 @@ Discussion
 
   Explain your answer.
 
-
-
-
-
-
+A dictionary is most efficient. Unlike a list, the order is not important.
+Even though Python allows you to index into a dictionary, a lot of other
+languages do not allow you to index into their equivalents. It is quick to add and
+remove values or key-values pairs. It is also quicker to look up items.
+Binary Search Tree is really only used to efficiently find items that can be
+ordered. Removing items in a Binary tree sounds like a pain because you'd have to 
+rebalance. 
 
 
 3. Explain why looking up, adding elements, and removing elements from a 
    dictionary or hash map are all O(1) operations.
 
-
+All these operations have a constant runtime because you do not need to traverse
+each key in the dictionary to do the operations. That would be an O(n)
+runtime. Instead, you can go directly there. Each operation might take different
+constant times, but again, it's still constant time, not linear time.
 
 
 
 
 4. Explain why removing elements from or adding elements to an arbitrary
    location in a Python list are O(n) operations.
-
-
-
-
-
-
+  
+  This is linear because, worst case scenary, you will need to traverse the entire
+  list in order to add or remove the element. There is no way to go directly to that
+  index without checking the ones before it.
 
 5. What is the correct runtime for:
 
@@ -70,6 +73,8 @@ Discussion
 
 
 6. What is the difference between a tree and a graph?
+
+
 
 
 
