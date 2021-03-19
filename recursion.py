@@ -32,9 +32,13 @@ class Node(object):
         """
 
         # TODO: Complete this method
-        # pass
+        print(self.data)
 
-
+        if self.next is None:
+            return
+        else:
+            self.next.traverse_recursively()
+        
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
 
