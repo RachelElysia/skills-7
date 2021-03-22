@@ -21,6 +21,7 @@ It would suck to search because, worst case scenario, you need to traverse
 the entire doubly-linked list.
 
 
+
 2. Which would be the most efficient data structure for a data set with the
    following requirements:
 
@@ -43,6 +44,7 @@ ordered. Removing items in a Binary tree sounds like a pain because you'd have t
 rebalance. 
 
 
+
 3. Explain why looking up, adding elements, and removing elements from a 
    dictionary or hash map are all O(1) operations.
 
@@ -53,28 +55,44 @@ constant times, but again, it's still constant time, not linear time.
 
 
 
-
 4. Explain why removing elements from or adding elements to an arbitrary
    location in a Python list are O(n) operations.
   
-  This is linear because, worst case scenary, you will need to traverse the entire
+  This is linear because, worst case scenario, you will need to traverse the entire
   list in order to add or remove the element. There is no way to go directly to that
-  index without checking the ones before it.
+  index without checking the elements before it.
+
+
 
 5. What is the correct runtime for:
 
   - Bubble Sort?
+  Quadratic runtime. You need to do a for loop within a for loop which causes
+  multiplying two linear times to get a quadratic time.
 
   - Quicksort?
+  This is the product of a linear and a logarithmic time, which in the long run is worse
+  than logarithmic, but much much better than quadratic as it is increasing at a
+  decreasing rate instead of quadratic which increases at an increasing rate. =P
+  Because we need linear number of pivots and logarithmically sort through the rest.
 
   - Merge Sort?
+  This is also the product of a linear and a logarithmic time. =P
+  You must go through the entire list, n, but then you are dividing and eliminating
+  which causes the logarithmic goodness to not be as bad as n.
 
   - Insertion Sort?
+  Insertion sort is worst case scenario quadratic runtime. If the list is reversed,
+  it would literally move every element after comparing every element to it's left
+  which would be something like 7+6+5+4+3+2+1 which is (n squared - n ) /2 I believe.
 
 
 6. What is the difference between a tree and a graph?
 
-
+A tree has a specific node that is the root of the tree. Each following node can be
+considered a part of the bigger tree, or have a sub tree. A graph can look more like a web
+where there is not a specific root node and you can have many connections between nodes.
+A tree is more hierarchical vs. a graph is more of a network.
 
 
 
@@ -85,23 +103,23 @@ constant times, but again, it's still constant time, not linear time.
   Given the list [8, 4, 1, 6, 5, 2, 7, 3]:
   When this function is initially called, what are the values of:
 
-    - lst -
+    - lst - [8, 4, 1, 6, 5, 2, 7, 3] whole thing
 
-    - pivot -
+    - pivot - [5] index 4
 
-    - lo -
+    - lo - [4, 1, 2, 3] lower in order
 
-    - hi -
+    - hi - [8, 6, 7] higher in order
 
 
 
   When the quicksort is first called recursively on the `lo` list, what are the
   values of:
 
-  - lst -
+  - lst - [4, 1, 2, 3] lower half
 
-  - pivot -
+  - pivot - [2] mid
 
-  - lo -
+  - lo - [1]
 
-  - hi -
+  - hi - [4, 3]
